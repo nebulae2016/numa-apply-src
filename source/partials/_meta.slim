@@ -1,0 +1,31 @@
+meta content="IE=edge" http-equiv="X-UA-Compatible"
+meta charset="utf-8"
+meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+/ Favicon
+link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32"
+link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16"
+link rel="icon" type="image/x-icon" href="images/favicon.ico"
+/ Open Graph data
+meta property="og:title" content="#{get_text_helper('meta-title')}"
+meta property="og:type" content="article"
+meta property="og:url" content="#{get_text_helper('site-url')}"
+meta property="og:image" content="#{@data['numa.og-image'].main.url if @data['numa.og-image'].present?}"
+meta property="og:description" content="#{get_text_helper('meta-description')}"
+meta property="og:site_name" content="#{get_text_helper('site-url')}"
+meta property="fb:admins" content="numaparis"
+
+meta[content="IE=edge" http-equiv="X-UA-Compatible"]
+meta[charset="utf-8"]
+meta[content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"]
+
+meta name="description" content="#{get_text_helper('meta-description')}"
+meta name="description" content="#{get_text_helper('meta-title')}"
+
+/ Twitter Card data
+meta name="twitter:card" content="summary"
+meta name="twitter:site" content="@numaparis"
+meta name="twitter:title" content="#{get_text_helper('meta-title')}"
+meta name="twitter:description" content="#{get_text_helper('meta-description')}"
+meta name="twitter:creator" content="@numaparis"
+/ Twitter Summary card images must be at least 120x120px
+meta name="twitter:image" content="#{@data['numa.og-image'].main.url if @data['numa.og-image'].present?}"

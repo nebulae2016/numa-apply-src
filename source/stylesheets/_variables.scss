@@ -1,0 +1,142 @@
+// Defaults
+// Numa Colours ---------------------------------------
+$sable: #FEE9C9;
+$corail: #EC6B69;
+$rose-fushia: #E50064;
+$jaune: #FFF489;
+$bleu-cyan: #46C1F0;
+$bleu-klein: #302683;
+$celadon: #8AC5C6;
+$turquoise: #29b2b7;
+$ardoise: #00587D;
+$mandarine: #F7AA59;
+$rose-candy: #E94190;
+$raisin: #731A66;
+// --------------------------------------------------
+
+$pi:     3.14;
+$font-size-base:     17px;
+$font-size-small:    15px;
+$font-family-base: 'Lato', sans-serif;
+$line-height: 		   1.5 !default;
+
+$brand-primary :     #000000;
+$body-color: 		     #000000;
+$text-color: 				 $body-color;
+$body-bg: 		       #f1f1f1; //d9f2ff
+
+$abbr-border-color:  $brand-primary;
+$hover-focus:        $brand-primary;
+$table-bg:					 #FFF;
+$table-cell-padding: 1em/2;
+$text-muted:  			 #000;
+$enable-hover-media-query: false;
+
+// template
+$bg-color: #d5d5d5;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                 $brand-primary;
+$link-decoration:            none !default;
+$link-hover-color:           $link-color;
+$link-hover-decoration:      none !default;
+
+$box-pad: 1.5em;
+$orange: #ff9c00;
+$blue: #002fc8;
+
+// Navbar --------------------
+$nav-link-color: #000;
+$nav-link-color-hover: $raisin;
+$navbar-bg-color: $bg-color;
+$navbar-height: 60px;
+$nav-color: #FFF;
+$nav-color-hov: #FFF;
+//  --------------------------
+
+// Apply button --------------
+$apply-btn-bg: $turquoise;
+$apply-btn-color: $ardoise;
+$apply-btn-hover-bg: $raisin; // darken($apply-btn-bg, 10%);
+$apply-btn-hover-color: #fff;
+//  --------------------------
+
+// Toggle --------------------
+$toggle-line: $ardoise;
+$toggle-bg: lighten($bg-color, 6%);
+//  --------------------------
+
+// Agenda --------------------
+$agenda-bg-color: $ardoise;
+$agenda-text-color: #fff; 
+//  --------------------------
+
+// Trackrecord ---------------
+$trackrecord-text-color: $ardoise;
+//  --------------------------
+
+// Map --------------------
+$map-color1: $ardoise;
+$map-color2: $raisin;
+//  --------------------------
+
+// Stories --------------------
+$stories-color1: $ardoise;
+$stories-color2: $raisin;
+//  --------------------------
+
+// keypoints --------------------
+$keypoints-color1: #731e66;
+$keypoints-color2: #f7ac52;
+//  --------------------------
+
+// keypoints --------------------
+$wanted-color1: $raisin;
+//  --------------------------
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1170px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+// Debugger
+// * {
+// 	outline: 1px dotted fade-out(black, 0.5);
+
+// 	@media screen and (min-width: $screen-xs) {
+// 		outline: 1px dotted fade-out(green, 0.5);
+// 	}
+// 	@media screen and (min-width: $screen-sm) {
+// 		outline: 1px dotted fade-out(olive, 0.5);
+// 	}
+// 	@media screen and (min-width: $screen-md) {
+// 		outline: 1px dotted fade-out(orange, 0.5);
+// 	}
+// 	@media screen and (min-width: $screen-lg) {
+// 		outline: 1px dotted fade-out(red, 0.5);
+// 	}
+// }

@@ -1,0 +1,31 @@
+general:
+  branches:
+    only:
+      - master
+machine:
+  timezone: UTC
+  ruby:
+    version: 2.3.0
+  environment:
+    MM_ENV: production
+  pre:
+    - "git config --global user.name 'CircleCI'"
+    - "git config --global user.email 'glenn@gpjones.org'"
+test:
+  override:
+    - 'echo "OK"'
+dependencies:
+  cache_directories:
+    - vendor/bundle
+  pre:
+    - sudo apt-get update
+    - sudo apt-get -yV install mecab
+    - sudo apt-get -yV install mecab-ipadic-utf8
+test:
+  override:
+    - echo "No tests are needed"
+deployment:
+  main:
+    branch: 'master'
+    commands:
+      - bundle exec middleman deploy

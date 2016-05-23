@@ -1,0 +1,216 @@
+- setup_prismic
+
+section#intro.intro style="background-image: url(#{main_data['numa.illustration'].main.url})"
+  .wrap
+    div
+      .heading
+        heading
+          = get_rich_text_helper('title')
+        a href="#{get_link_helper("apply-btn-link")}" target="_blank" class='btn big btn-apply'
+          div class="countdown simple" data-date="#{get_text_helper('countdown')}"
+            = get_text_helper('apply-btn-text')
+        hr
+        a.btn.btn-info href="#{get_link_helper("infosession-btn-link")}" target="_blank" = get_text_helper('infosession-btn-text')
+
+.content
+  section#accelerator
+    header.col.w8.sm-w6 = get_rich_text_helper('header-accelerator')
+    ul.agenda.col.w4.sm-w6
+      li Agenda for Season 9
+      - events = get_group_helper('accelerator-agenda')
+      - events.each do |e|
+        li
+          = e['name'].value if e['name'].present?
+          strong
+            = e['date'].value if e['date'].present?
+
+      li = link_to get_text_helper('apply-btn-text'), "#{get_link_helper("apply-btn-link")}", :class => 'btn btn-lg btn-apply', :target=> '_blank'
+
+    ul.trackrecord
+      - trackrecord_points = get_group_helper('trackrecord_points')
+      - trackrecord_points.each do |trp|
+        li
+          strong
+            = trp['accent'].value + " " if trp['accent'].present?
+          = trp['text'].value if trp['text'].present?
+
+  - if @data['numa.video-embed'].present? 
+    section#video
+      header
+        = get_rich_text_helper('text-video')
+      .vidholder
+        #play-video.vidthumb
+          = image_tag main_data['numa.video-cover'].main.url, :class=>'thumb' if main_data['numa.video-cover'].present?
+          div.le-play = image_tag 'play.png', :class=>'playbtn'
+            #videocontainer
+              = main_data['numa.video-embed'].as_html
+
+  section#wanted
+    header = get_rich_text_helper('header-wanted')
+
+    ul.wanted
+      - want = get_group_helper('wanted')
+      - want.each do |w|
+        li
+          = image_tag w['image'].main.url if image_tag w['image'].present?
+          strong
+            = w['criteria'].value if w['criteria'].present?
+
+    section#keypoints
+      header
+      = get_rich_text_helper('header-keypoints')
+    ul.keypoints
+      - acc_keypoints = get_group_helper('keypoints')
+      - acc_keypoints.each do |p|
+        li
+          = image_tag p['keypoint-image'].main.url if p['keypoint-image'].present?
+          h3
+            = p['keypoint-title'].value if p['keypoint-title'].present?
+          ul
+            = p['keypoint-text'].value if p['keypoint-text'].present?
+
+  section#stories
+    header
+      = get_rich_text_helper('header-stories')
+
+    ul.stories
+      - alumni_stories = get_group_helper('stories')
+      - alumni_stories.each do |s|
+        li
+          .photo
+            = image_tag s['image'].main.url if s['image'].present?
+          h3
+            = s['name'].value if s['name'].present?
+          blockquote
+            = s['quote'].value if s['quote'].present?
+
+
+  section#mentors
+    header
+      = get_rich_text_helper('header-mentors')
+
+    ul.people
+      - mentor_members = get_group_helper('mentors')
+      - mentor_members.each do |m|
+        li
+          .avatar
+            = image_tag m['image'].main.url if m['image'].present?
+            = link_to m['twitter'].value, 'http://www.twitter.com/' + m['twitter'].value, :target => '_blank', :class=>'twitter' if m['twitter'].present?
+            = link_to 'linkedin', m['linkedin'].value, :target => '_blank', :class=>'linkedin' if m['linkedin'].present?
+
+          strong= m['name'].value if m['name'].present?
+          em = m['role'].value if m['role'].present?
+
+  section#team
+    header
+      = get_rich_text_helper('header-team')
+    ul.people
+      - team_members = get_group_helper('team')
+      - team_members.each do |tm|
+        li
+          .avatar
+            = image_tag tm['image'].main.url if tm['image'].present?
+            = link_to tm['twitter'].value, 'http://www.twitter.com/' + tm['name'].value, :target => '_blank', :class=>'twitter' if tm['twitter'].present?
+            = link_to 'linkedin', tm['linkedin'].value, :target => '_blank', :class=>'linkedin' if tm['linkedin'].present?
+
+          strong = tm['name'].value if tm['name'].present?
+          em = tm['role'].value if tm['role'].present?
+
+
+  section#perks
+    header
+      = get_rich_text_helper('header-perks')
+
+    ul.perks.clearfix 
+      li.showmore
+      - perks = get_group_helper('perks')
+      - perks.each do |p|
+        li
+          - if p['image'].present? && p['name'].present?
+            = image_tag p['image'].main.url, :alt=> p['name'].value
+          - elsif p['image'].present?
+            = image_tag p['image'].main.url
+
+  section#program
+    header
+      = get_rich_text_helper('header-program')
+    ul.program
+      - acc_program = get_group_helper('program')
+      - acc_program.each do |p|
+        li
+          h3 
+            = p['title'].value if p['title'].present?
+          ul
+            li.showmore 
+              = p['content'].value if p['content'].present?
+
+  section#expand
+    header
+      = get_rich_text_helper('header-international')
+
+    .le-mapcontainer
+      .col.w3
+        ul.inc
+          li.new_york Techstars (New York)
+          li.Montreal FunderFuel (Montreal)
+          li.london Campus (London)
+          li.Lisbon Lisbon Challenge (Lisbon)
+          li.Mardid Tetuan Valey (Madrid)
+          li.Berlin Hub Raum (Berlin)
+          li.Munich Hardware.co (Munich)
+          li.Warshow D-raft (Warsaw)
+          li.Karachi The Nest (Karachi)
+          li.Dubai Astro Labs (Dubai)
+          li.Sydney Fish Burners (Sydney)
+          li.Tel_Aviv The Hive (Tel Aviv)
+          li.Nairobi iHub_ (Nairobi)
+          li.Johhannesburg Jozi Hub (Johannesburg)
+          li.Kampala Outbox (Kampala)
+          li.Lagos Co-Creation Hub (Lagos)
+          li.Accra iSpace (Accra)
+          li.Venice H-farm (Venice)
+          li.Palo_Alto Blackbox (Palo Alto)
+          li.Durham Underground (Durham)
+          li.Chicago 1971 (Chicago)
+      .col.w9
+        #map
+          .point.new_york
+          .point.Montreal
+          .point.london
+          .point.Lisbon
+          .point.Mardid
+          .point.Berlin
+          .point.Munich
+          .point.Warshow
+          .point.Karachi
+          .point.Dubai
+          .point.Sydney
+          .point.Tel_Aviv
+          .point.Nairobi
+          .point.Johhannesburg
+          .point.Kampala
+          .point.Lagos
+          .point.Accra
+          .point.Venice
+          .point.Palo_Alto
+          .point.Durham
+          .point.Chicago
+          a.point.numa.PARIS href="http://paris.numa.co/" target="_blank" title="numa PARIS"
+          a.point.numa.MOSCOW href="http://moscow.numa.co/" target="_blank" title="numa MOSCOW"
+          a.point.numa.BENGALURU href="http://bengaluru.numa.co/" target="_blank" title="numa BENGALURU"
+          a.point.numa.CASABLANCA href="http://casablanca.numa.co/" target="_blank" title="numa CASABLANCA"
+          a.point.numa.MEXIC href="http://mexico.numa.co/" target="_blank" title="numa MEXIC"
+          a.point.numa.BARCELONA href="http://barcelona.numa.co/" target="_blank" title="numa BARCELONA"
+
+  section#partners
+    header
+      = get_rich_text_helper('header-partners')
+    ul.partners
+      - part = get_group_helper('partners')
+      - part.each do |o|
+        - if o['logo'].present? && o['name'].present?
+          li
+            = image_tag o['logo'].main.url, :alt => o['name'].value
+        - elsif o['logo'].present?
+          li
+            = image_tag o['logo'].main.url
