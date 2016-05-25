@@ -5,8 +5,8 @@ api_url = 'https://circleci.com/api/v1/project/nebulae2016/numa-apply-src?circle
 
 response = HTTParty.post(
 	api_url, 
-	:headers => { 'Content-Type' => 'application/json' },
-	:build_parameters => { :location => 'bangalore' }.to_json
+	:body => {:build_parameters => {:location=>'bangalore'}}.to_json,
+	:headers => { 'Content-Type' => 'application/json' }
 )
 
 ap response

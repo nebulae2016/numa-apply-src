@@ -4,15 +4,18 @@ bangalore:
   article_type: article
   repo_owner: NumaParis
   repo_name: new-applyblr.numa.co
+  domain_name: applyblr.numa.co
 moscow:
   prismic_url: https://numa-apply-moscow.prismic.io/api
   main_type: numa
   article_type: article
   repo_owner: NumaParis
   repo_name: moscow.numa.co
+  domain_name: moscow.numa.co
 mexico:
   prismic_url: https://numa-apply-mex.prismic.io/api
   main_type: numa
   article_type: article
   repo_owner: NumaParis
   repo_name: mexico.numa.co
+  domain_name: mexico.numa.co

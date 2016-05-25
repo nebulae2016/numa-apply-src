@@ -9,6 +9,7 @@ set :location_settings, YAML.load(File.read("numa_locations.yml"))
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+page 'CNAME', layout: false
 
 require "lib/helpers/prismic_helpers"
 helpers PrismicHelpers
@@ -28,7 +29,6 @@ def get_loc_setting(setting_name)
 	config[:location_settings][location.to_s][setting_name.to_s]
 end
 
-puts get_loc_setting('prismic_url')
 set :prismic_api_url, get_loc_setting('prismic_url')
 set :prismic_main_custom_type, get_loc_setting('main_type')
 set :prismic_article_custom_type, get_loc_setting('article_type')
@@ -38,6 +38,11 @@ configure :build do
 	set :relative_links, true
   activate :minify_css
   activate :minify_javascript
+	write_CNAME
+end
+
+def write_CNAME
+	IO.write "source/CNAME", get_loc_setting(:domain_name)
 end
 
 def location_based_remote
