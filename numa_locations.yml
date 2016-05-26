@@ -5,6 +5,7 @@ bangalore:
   deploy_repo_owner: NumaParis
   deploy_repo_name: new-applyblr.numa.co
   domain_name: applyblr.numa.co
+  nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-bangalore&utm_medium=cpc&utm_campaign=apply-numa-bangalore
 moscow:
   prismic_url: https://numa-apply-moscow.prismic.io/api
   main_type: numa
@@ -12,6 +13,7 @@ moscow:
   deploy_repo_owner: NumaParis
   deploy_repo_name: applymoscow.numa.co
   domain_name: applymoscow.numa.co
+  nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-moscow&utm_medium=cpc&utm_campaign=apply-numa-moscow
 mexico:
   prismic_url: https://numa-apply-mex.prismic.io/api
   main_type: numa
@@ -19,3 +21,5 @@ mexico:
   deploy_repo_owner: NumaParis
   deploy_repo_name: applymexico.numa.co
   domain_name: applymexico.numa.co
+  nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-mexico&utm_medium=cpc&utm_campaign=apply-numa-mexico
+

@@ -8,7 +8,9 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 require "lib/helpers/prismic_helpers"
+require "lib/helpers/numa_helpers"
 helpers PrismicHelpers
+helpers NumaHelpers
 
 configure :development do
   activate :livereload
