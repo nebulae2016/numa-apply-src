@@ -25,7 +25,7 @@ test:
   override:
     - echo "No tests are needed"
 deployment:
-  main:
-    branch: /.*/
+  autodeploy:
+    branch: [bangalore, mexico, moscow]
     commands:
       - bundle exec middleman deploy
