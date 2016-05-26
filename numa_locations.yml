@@ -11,11 +11,11 @@ moscow:
   article_type: article
   deploy_repo_owner: NumaParis
   deploy_repo_name: applymoscow.numa.co
-  domain_name: moscow.numa.co
+  domain_name: applymoscow.numa.co
 mexico:
   prismic_url: https://numa-apply-mex.prismic.io/api
   main_type: numa
   article_type: article
   deploy_repo_owner: NumaParis
   deploy_repo_name: applymexico.numa.co
-  domain_name: mexico.numa.co
+  domain_name: applymexico.numa.co
