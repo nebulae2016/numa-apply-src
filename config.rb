@@ -1,10 +1,7 @@
-require 'yaml'
-
 Dotenv.load
 
+require 'yaml'
 set :location_settings, YAML.load(File.read("numa_locations.yml"))
-
-# General settings
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -34,6 +31,7 @@ set :prismic_main_custom_type, get_loc_setting('main_type')
 set :prismic_article_custom_type, get_loc_setting('article_type')
 
 configure :build do
+	puts "Building apply-page of: " + ENV['location']
 	activate :relative_assets
 	set :relative_links, true
   activate :minify_css
@@ -46,8 +44,8 @@ def write_CNAME
 end
 
 def location_based_remote
-	repo_owner = 	get_loc_setting(:repo_owner)
-	repo_name = 	get_loc_setting(:repo_name)
+	repo_owner = 	get_loc_setting(:deploy_repo_owner)
+	repo_name = 	get_loc_setting(:deploy_repo_name)
 	return "https://#{ENV['GH_TOKEN']}@github.com/#{repo_owner}/#{repo_name}.git"
 end
 
