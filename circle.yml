@@ -1,7 +1,7 @@
 general:
   branches:
-    only:
-      - master
+    ignore:
+      - /.*/
 machine:
   timezone: UTC
   ruby:
@@ -11,9 +11,6 @@ machine:
   pre:
     - "git config --global user.name 'CircleCI'"
     - "git config --global user.email 'glenn@gpjones.org'"
-test:
-  override:
-    - 'echo "OK"'
 dependencies:
   cache_directories:
     - vendor/bundle
