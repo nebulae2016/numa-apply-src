@@ -6,7 +6,6 @@ set :location_settings, YAML.load(File.read("numa_locations.yml"))
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
-page 'CNAME', layout: false
 
 require "lib/helpers/prismic_helpers"
 helpers PrismicHelpers
