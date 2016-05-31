@@ -56,10 +56,3 @@ activate :deploy do |deploy|
 	deploy.build_before = true
   deploy.commit_message = "Automated deploy at #{Time.now}"
 end
-
-# activate :google_analytics do |ga|
-#   ga.tracking_id = 'UA-76972340-1'
-#   ga.domain_name = 'somedomain.com'
-#   ga.enhanced_link_attribution = true
-#   ga.development = false
-# end
