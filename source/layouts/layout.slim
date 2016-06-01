@@ -30,7 +30,7 @@ html
 						span class="icon-bar"					
 					.logo = link_to image_tag(@data['numa.page-logo'].main.url, :alt => 'logo NUMA'), '/'
 
-				= link_to 'Apply Now', 'https://www.f6s.com/numaparis-season9', :class => 'btn small btn-apply', :target=> '_blank'
+				= link_to get_text_helper('apply-btn-text'), get_link_helper("apply-btn-link"), :class => 'btn small btn-apply', :target=> '_blank'
 				#navbar.nav-collapse.collapse
 					ul.nav
 						li= current_page.url == "/" ? link_to('Accelerator', '#accelerator') : link_to('Accelerator', '/#accelerator')
@@ -44,7 +44,10 @@ html
 		.container
 			main style="min-height: 100vh" == yield
 			footer
-				= partial "partials/socialmedia"
+				ul.social
+					li= link_to image_tag('twitter.svg', :alt => 'twitter'), get_link_helper("social-tw"), :target => '_blank'
+					li= link_to image_tag('facebook.svg', :alt => 'facebook'), get_link_helper("social-fb"), :target => '_blank'
+					li= get_text_helper('footer-text')
 
 		= partial 'partials/tagmanager'
 		= partial 'partials/ga'
