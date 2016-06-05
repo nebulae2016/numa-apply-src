@@ -22,4 +22,11 @@ mexico:
   deploy_repo_name: applymexico.numa.co
   domain_name: applymexico.numa.co
   nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-mexico&utm_medium=cpc&utm_campaign=apply-numa-mexico
-
+paris:
+  prismic_url: https://numa-apply-paris.prismic.io/api
+  main_type: numa
+  article_type: article
+  deploy_repo_owner: NumaParis
+  deploy_repo_name: apply.numa.co
+  domain_name: apply.numa.co
+  nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-paris&utm_medium=cpc&utm_campaign=apply-numa-paris
