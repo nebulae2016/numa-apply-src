@@ -47,7 +47,8 @@ html
 				ul.social
 					li= link_to image_tag('twitter.svg', :alt => 'twitter'), get_link_helper("social-tw"), :target => '_blank'
 					li= link_to image_tag('facebook.svg', :alt => 'facebook'), get_link_helper("social-fb"), :target => '_blank'
-					li= get_text_helper('footer-text')
+					li.text= get_text_helper('footer-text')
+					li.text Made and maintained by #{link_to 'Nebulae2016', tagged_nebulae_url}
 
 		= partial 'partials/tagmanager'
 		= partial 'partials/ga'
