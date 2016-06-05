@@ -41,13 +41,14 @@ html
 						li= link_to 'FAQ', "/faq"
 						li= link_to 'How To Apply', "/how-to-apply-successfully"
 
-		.container
-			main style="min-height: 100vh" == yield
-			footer
-				ul.social
-					li= link_to image_tag('twitter.svg', :alt => 'twitter'), get_link_helper("social-tw"), :target => '_blank'
-					li= link_to image_tag('facebook.svg', :alt => 'facebook'), get_link_helper("social-fb"), :target => '_blank'
-					li= get_text_helper('footer-text')
+    .container
+      main style="min-height: 100vh" == yield
+      footer
+        ul.social
+          li = link_to image_tag('twitter.svg', :alt => 'twitter'), get_link_helper("social-tw"), :target => '_blank'
+          li = link_to image_tag('facebook.svg', :alt => 'facebook'), get_link_helper("social-fb"), :target => '_blank'
+          li = get_text_helper('footer-text')
+          li.text style="width: 400px; float: right; text-align: right"= "Made and maintained by #{link_to 'Nebulae2016', tagged_nebulae_url}"
 
-		= partial 'partials/tagmanager'
-		= partial 'partials/ga'
+    = partial 'partials/tagmanager'
+    = partial 'partials/ga'
