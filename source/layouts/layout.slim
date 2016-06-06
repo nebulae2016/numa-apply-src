@@ -19,32 +19,32 @@ html
         });
       });
 
-	body class="#{page_classes}" data-spy="scroll" data-target="#mainnav"
+  body class="#{page_classes}" data-spy="scroll" data-target="#mainnav"
 
-		nav.navbar.fixed-top
-			.container
-				.nav-header
-					button.toggle.collapsed type="button" data-toggle="collapse" data-target="#navbar"
-						span class="icon-bar"
-						span class="icon-bar"
-						span class="icon-bar"					
-					.logo = link_to image_tag(@data['numa.page-logo'].main.url, :alt => 'logo NUMA'), '/'
+    nav.navbar.fixed-top
+      .container
+        .nav-header
+          button.toggle.collapsed type="button" data-toggle="collapse" data-target="#navbar"
+            span class="icon-bar"
+            span class="icon-bar"
+            span class="icon-bar"					
+            .logo = link_to image_tag(@data['numa.page-logo'].main.url, :alt => 'logo NUMA'), '/' if @data['numa.page-logo'].present?
 
-				= link_to 'Apply Now', 'https://www.f6s.com/numaparis-season9', :class => 'btn small btn-apply', :target=> '_blank'
-				#navbar.nav-collapse.collapse
-					ul.nav
-						li= current_page.url == "/" ? link_to('Accelerator', '#accelerator') : link_to('Accelerator', '/#accelerator')
-						/ li= current_page.url == "/" ? link_to('Wanted', '#wanted') : link_to('Wanted', '/#wanted')
-						li= current_page.url == "/" ? link_to('Program', '#program') : link_to('Program', '/#program')
-						li= current_page.url == "/" ? link_to('Team', '#team') : link_to('Team', '/#team')
-						/ li= current_page.url == "/" ? link_to('Portfolio', '#success') : link_to('Portfolio', '/#success')
-						li= link_to 'FAQ', "/faq"
-						li= link_to 'How To Apply', "/how-to-apply-successfully"
+            = link_to 'Apply Now', 'https://www.f6s.com/numaparis-season9', :class => 'btn small btn-apply', :target=> '_blank'
+        #navbar.nav-collapse.collapse
+          ul.nav
+            li= current_page.url == "/" ? link_to('Accelerator', '#accelerator') : link_to('Accelerator', '/#accelerator')
+            / li= current_page.url == "/" ? link_to('Wanted', '#wanted') : link_to('Wanted', '/#wanted')
+            li= current_page.url == "/" ? link_to('Program', '#program') : link_to('Program', '/#program')
+            li= current_page.url == "/" ? link_to('Team', '#team') : link_to('Team', '/#team')
+            / li= current_page.url == "/" ? link_to('Portfolio', '#success') : link_to('Portfolio', '/#success')
+            li= link_to 'FAQ', "/faq"
+            li= link_to 'How To Apply', "/how-to-apply-successfully"
 
-		.container
-			main style="min-height: 100vh" == yield
-			footer
-				= partial "partials/socialmedia"
-			
-		/ = google_analytics_universal_tag
-		= partial 'partials/tagmanager'
+    .container
+      main style="min-height: 100vh" == yield
+      footer
+        = partial "partials/socialmedia"
+
+    / = google_analytics_universal_tag
+    = partial 'partials/tagmanager'

@@ -23,6 +23,6 @@ test:
     - echo "No tests are needed"
 deployment:
   autodeploy:
-    branch: [bangalore, mexico, moscow]
+    branch: [bangalore, mexico, moscow, paris]
     commands:
       - bundle exec middleman deploy

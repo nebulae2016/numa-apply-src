@@ -1,6 +1,6 @@
 - setup_prismic
 
-- if main_data['numa.illustration']
+- if main_data['numa.illustration'].present?
   section#intro.intro style="background-image: url(#{main_data['numa.illustration'].main.url})"
     .wrap
       div
@@ -52,10 +52,11 @@
     ul.wanted
       - want = get_group_helper('wanted')
       - want.each do |w|
-        li
-          = image_tag w['image'].main.url if image_tag w['image'].present?
-          strong
-            = w['criteria'].value if w['criteria'].present?
+        - if w['image'].present?
+          li
+            = image_tag w['image'].main.url           
+            strong
+              = w['criteria'].value if w['criteria'].present?
 
     section#keypoints
       header
