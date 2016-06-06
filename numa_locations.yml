@@ -3,7 +3,7 @@ bangalore:
   main_type: numa
   article_type: article
   deploy_repo_owner: NumaParis
-  deploy_repo_name: new-applyblr.numa.co
+  deploy_repo_name: applyblr.numa.co
   domain_name: applyblr.numa.co
   nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-bangalore&utm_medium=cpc&utm_campaign=apply-numa-bangalore
 moscow:
