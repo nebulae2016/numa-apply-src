@@ -373,14 +373,14 @@ nav.navbar
 	@media screen and (min-width: $screen-sm)
 		padding-top: 58%
 	
-	background-color: fade-out($turquoise, 0.4)
+	background-color: fade-out($mandarine, 0.5)
 	background-blend-mode: lighten
 	background-size: cover
 	position: relative
 	
 	.wrap
 		text-align: center
-		background-color: fade-out($raisin, 0.7)
+		background-color: fade-out($bleu-klein, 0.7)
 		+stretch
 		> div
 			display: table
@@ -395,7 +395,7 @@ nav.navbar
 		+center-block
 	
 	h1, h2
-		text-shadow: 1px 1px 0px fade-out(#000, .4)
+		text-shadow: 1px 1px 3px fade-out(#000, .4)
 	
 	h1
 		@media screen and (min-width: 330px)
@@ -518,14 +518,12 @@ section#accelerator
 	position: relative
 	padding: $box-pad
 	+box-sizing(border-box)
-	// float: right
 	margin-bottom: $box-pad
 	
 	@media screen and (max-width: $screen-sm)
 		margin-left: -$box-pad
 		margin-right: -$box-pad
 		+box-sizing(content-box)
-		// width: 100%
 	
 	@media screen and (min-width: $screen-xs) and (max-width: $screen-sm)
 		+box-sizing(content-box)
@@ -553,7 +551,7 @@ section#accelerator
 		border-bottom: 2px solid white
 		line-height: 37px
 		margin-bottom: 2px
-		color: white
+		color: $agenda-text-color
 		&:first-child
 			font-weight: bold
 			&:before
@@ -746,12 +744,12 @@ section#partners
 
 .partners
 	li
-		padding: $box-pad/2
+		padding: $box-pad
 
 		display: inline-block
 		img
 			display: block
-			max-width: 130px
+			max-width: 80px
 
 .perks
 	position: relative
