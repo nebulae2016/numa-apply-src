@@ -58,9 +58,9 @@ $nav-color-hov: #FFF;
 //  --------------------------
 
 // Apply button --------------
-$apply-btn-bg: $mandarine;
-$apply-btn-color: white;
-$apply-btn-hover-bg: $bleu-cyan; // darken($apply-btn-bg, 10%);
+$apply-btn-bg: $turquoise;
+$apply-btn-color: $ardoise;
+$apply-btn-hover-bg: $raisin; // darken($apply-btn-bg, 10%);
 $apply-btn-hover-color: #fff;
 //  --------------------------
 
@@ -70,31 +70,31 @@ $toggle-bg: lighten($bg-color, 6%);
 //  --------------------------
 
 // Agenda --------------------
-$agenda-bg-color: $bleu-klein;
-$agenda-text-color: white; 
+$agenda-bg-color: $ardoise;
+$agenda-text-color: #fff; 
 //  --------------------------
 
 // Trackrecord ---------------
-$trackrecord-text-color: $bleu-klein;
+$trackrecord-text-color: $ardoise;
 //  --------------------------
 
 // Map --------------------
-$map-color1: $mandarine;
-$map-color2: $bleu-klein;
+$map-color1: $ardoise;
+$map-color2: $raisin;
 //  --------------------------
 
 // Stories --------------------
-$stories-color2: $bleu-klein;
-$stories-color1: $bleu-cyan;
+$stories-color1: $ardoise;
+$stories-color2: $raisin;
 //  --------------------------
 
 // keypoints --------------------
-$keypoints-color1: $bleu-klein;
-$keypoints-color2: $bleu-cyan;
+$keypoints-color1: #731e66;
+$keypoints-color2: #f7ac52;
 //  --------------------------
 
 // keypoints --------------------
-$wanted-color1: $bleu-klein;
+$wanted-color1: $raisin;
 //  --------------------------
 
 // Extra small screen / phone

@@ -2,24 +2,24 @@
 
 doctype html
 html
-	head
-		= partial "partials/meta" 
-		title = get_title_helper
-		link[href="//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"]
-		= stylesheet_link_tag :application
-		= javascript_include_tag :all
-		javascript:
-			$(function() {
-				var endDate = "June 7, 2087 15:03:25";
-				$('.countdown.simple').countdown({
-					date: endDate,
-					render: function(data) {
-						$(this.el).html("<div class='days'>" + this.leadingZeros(data.days, 1) + " <span>days</span></div><div class='hours'>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div><div class='mins'>" + this.leadingZeros(data.min, 2) + " <span>min</span></div><div class='sec'>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
-					}
-				});
-			});
+  head
+    = partial "partials/meta" 
+    title = get_title_helper
+    link[href="//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css"]
+    = stylesheet_link_tag :application
+    = javascript_include_tag :all
+    javascript:
+      $(function() {
+        var endDate = "June 7, 2087 15:03:25";
+        $('.countdown.simple').countdown({
+          date: endDate,
+          render: function(data) {
+            $(this.el).html("<div class='days'>" + this.leadingZeros(data.days, 1) + " <span>days</span></div><div class='hours'>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div><div class='mins'>" + this.leadingZeros(data.min, 2) + " <span>min</span></div><div class='sec'>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+          }
+        });
+      });
 
-	body data-spy="scroll" data-target="#mainnav"
+	body class="#{page_classes}" data-spy="scroll" data-target="#mainnav"
 
 		nav.navbar.fixed-top
 			.container
@@ -31,7 +31,6 @@ html
 					.logo = link_to image_tag(@data['numa.page-logo'].main.url, :alt => 'logo NUMA'), '/'
 
 				= link_to get_text_helper('apply-btn-text'), get_link_helper("apply-btn-link"), :class => 'btn small btn-apply', :target=> '_blank'
-
 				#navbar.nav-collapse.collapse
 					ul.nav
 						li= current_page.url == "/" ? link_to('Accelerator', '#accelerator') : link_to('Accelerator', '/#accelerator')
@@ -43,7 +42,7 @@ html
 						li= link_to 'How To Apply', "/how-to-apply-successfully"
 
 		.container
-			main == yield
+			main style="min-height: 100vh" == yield
 			footer
 				ul.social
 					li= link_to image_tag('twitter.svg', :alt => 'twitter'), get_link_helper("social-tw"), :target => '_blank'
