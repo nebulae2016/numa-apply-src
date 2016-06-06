@@ -7,4 +7,5 @@ public: true
 - setup_prismic
 
 .content.clearfix.toppad
-  = faq_data.as_html(nil)
+  - if @faq_data
+    = @faq_data.as_html(nil)
