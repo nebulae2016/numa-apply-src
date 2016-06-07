@@ -1525,15 +1525,24 @@ div.le-mapcontainer
 // better use svgs here
 footer
 	padding: $box-pad
+	min-height: 40px
 
 ul.social // social links in the bootom footer
+	display: block
+	width: 100%
 	li
 		display: inline-block
 		width: 20px
+		float: left
 		margin-right: 10px
 		padding: 0
-		.text
+		
+		&.text
 			width: auto
 			font-size: $font-size-small	
 			vertical-align: top
 			padding-left: $box-pad
+
+		&:last-child
+			right: 0
+			float: right

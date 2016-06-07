@@ -30,21 +30,25 @@ html
             span class="icon-bar"					
             .logo = link_to image_tag(@data['numa.page-logo'].main.url, :alt => 'logo NUMA'), '/' if @data['numa.page-logo'].present?
 
-            = link_to 'Apply Now', 'https://www.f6s.com/numaparis-season9', :class => 'btn small btn-apply', :target=> '_blank'
-        #navbar.nav-collapse.collapse
-          ul.nav
-            li= current_page.url == "/" ? link_to('Accelerator', '#accelerator') : link_to('Accelerator', '/#accelerator')
-            / li= current_page.url == "/" ? link_to('Wanted', '#wanted') : link_to('Wanted', '/#wanted')
-            li= current_page.url == "/" ? link_to('Program', '#program') : link_to('Program', '/#program')
-            li= current_page.url == "/" ? link_to('Team', '#team') : link_to('Team', '/#team')
-            / li= current_page.url == "/" ? link_to('Portfolio', '#success') : link_to('Portfolio', '/#success')
-            li= link_to 'FAQ', "/faq"
-            li= link_to 'How To Apply', "/how-to-apply-successfully"
+				= link_to get_text_helper('apply-btn-text'), get_link_helper("apply-btn-link"), :class => 'btn small btn-apply', :target=> '_blank'
+				#navbar.nav-collapse.collapse
+					ul.nav
+						li= current_page.url == "/" ? link_to('Accelerator', '#accelerator') : link_to('Accelerator', '/#accelerator')
+						/ li= current_page.url == "/" ? link_to('Wanted', '#wanted') : link_to('Wanted', '/#wanted')
+						li= current_page.url == "/" ? link_to('Program', '#program') : link_to('Program', '/#program')
+						li= current_page.url == "/" ? link_to('Team', '#team') : link_to('Team', '/#team')
+						/ li= current_page.url == "/" ? link_to('Portfolio', '#success') : link_to('Portfolio', '/#success')
+						li= link_to 'FAQ', "/faq"
+						li= link_to 'How To Apply', "/how-to-apply-successfully"
 
-    .container
-      main style="min-height: 100vh" == yield
-      footer
-        = partial "partials/socialmedia"
+		.container
+			main style="min-height: 100vh" == yield
+			footer
+				ul.social
+					li= link_to image_tag('twitter.svg', :alt => 'twitter'), get_link_helper("social-tw"), :target => '_blank'
+					li= link_to image_tag('facebook.svg', :alt => 'facebook'), get_link_helper("social-fb"), :target => '_blank'
+					li.text= get_text_helper('footer-text')
+					li.text Made and maintained by #{link_to 'Nebulae2016', tagged_nebulae_url}
 
-    / = google_analytics_universal_tag
-    = partial 'partials/tagmanager'
+		= partial 'partials/tagmanager'
+		= partial 'partials/ga'
