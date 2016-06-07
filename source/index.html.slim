@@ -17,7 +17,7 @@
 	section#accelerator
 		header.col.w8.sm-w6 = get_rich_text_helper('header-accelerator')
 		ul.agenda.col.w4.sm-w6
-			li = get_text_helper('apply-btn-text')
+			li = get_text_helper('agenda-header')
 			- events = get_group_helper('accelerator-agenda')
 			- events.each do |e|
 				li
