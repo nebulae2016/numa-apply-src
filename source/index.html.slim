@@ -113,7 +113,7 @@
 				li
 					.avatar
 						= image_tag tm['image'].main.url if tm['image'].present?
-						= link_to tm['twitter'].value, 'http://www.twitter.com/' + tm['name'].value, :target => '_blank', :class=>'twitter' if tm['twitter'].present?
+						= link_to tm['twitter'].value, 'http://www.twitter.com/' + tm['twitter'].value, :target => '_blank', :class=>'twitter' if tm['twitter'].present?
 						= link_to 'linkedin', tm['linkedin'].value, :target => '_blank', :class=>'linkedin' if tm['linkedin'].present?
 
 					strong = tm['name'].value if tm['name'].present?
