@@ -1,17 +1,17 @@
 - setup_prismic
 
-- if main_data['numa.illustration']
-  section#intro.intro style="background-image: url(#{main_data['numa.illustration'].main.url})"
-    .wrap
-      div
-        .heading
-          heading
-            = get_rich_text_helper('title')
-          a href="#{get_link_helper("apply-btn-link")}" target="_blank" class='btn big btn-apply'
-            div class="countdown simple" data-date="#{get_text_helper('countdown')}"
-              = get_text_helper('apply-btn-text')
-          hr
-          a.btn.btn-info href="#{get_link_helper("infosession-btn-link")}" target="_blank" = get_text_helper('infosession-btn-text')
+- if @data['numa.illustration'].present?
+	section#intro.intro style="background-image: url(#{main_data['numa.illustration'].main.url})"
+		.wrap
+			div
+				.heading
+					heading
+						= get_rich_text_helper('title')
+					a href="#{get_link_helper("apply-btn-link")}" target="_blank" class='btn big btn-apply'
+						div class="countdown simple" data-date="#{get_text_helper('countdown')}"
+							= get_text_helper('apply-btn-text')
+					hr
+					a.btn.btn-info href="#{get_link_helper("infosession-btn-link")}" target="_blank" = get_text_helper('infosession-btn-text')
 
 .content
   section#accelerator
