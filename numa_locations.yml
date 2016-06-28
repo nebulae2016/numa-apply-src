@@ -30,3 +30,11 @@ paris:
   deploy_repo_name: apply.numa.co
   domain_name: apply.numa.co
   nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-paris&utm_medium=cpc&utm_campaign=apply-numa-paris
+casa:
+  prismic_url: https://numa-apply-casa.prismic.io/api
+  main_type: numa
+  article_type: article
+  deploy_repo_owner: NumaParis
+  deploy_repo_name: applycasa.numa.co
+  domain_name: applycasa.numa.co
+  nebulae_link: http://nebulae2016.com/?utm_source=apply-numa-casa&utm_medium=cpc&utm_campaign=apply-numa-casa
