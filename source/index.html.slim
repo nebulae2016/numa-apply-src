@@ -54,7 +54,7 @@
 			- want.each do |w|
 				- if w['image'].present?
 					li
-						= image_tag w['image'].main.url           
+						= image_tag w['image'].main.url
 						strong
 							= w['criteria'].value if w['criteria'].present?
 
