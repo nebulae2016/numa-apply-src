@@ -373,14 +373,14 @@ nav.navbar
 	@media screen and (min-width: $screen-sm)
 		padding-top: 58%
 	
-	background-color: fade-out($turquoise, 0.4)
+	background-color: fade-out($bleu-klein, 0.4)
 	background-blend-mode: lighten
 	background-size: cover
 	position: relative
 	
 	.wrap
 		text-align: center
-		background-color: fade-out($raisin, 0.7)
+		background-color: fade-out($bleu-klein, 0.5)
 		+stretch
 		> div
 			display: table
@@ -441,9 +441,6 @@ nav.navbar
 			line-height: 1em
 			display: block
 			text-transform: uppercase
-
-
-
 
 
 
@@ -1131,7 +1128,7 @@ blockquote
 	padding-right: $box-pad
 	
 	h2,h3,h4
-		color: $turquoise
+		color: $headers-color
 	h3, h4
 		margin-top: $box-pad
 	h4
@@ -1140,7 +1137,7 @@ blockquote
 		&:hover
 			text-decoration: none
 		text-decoration: underline
-		color: $turquoise
+		color: $headers-color
 	li
 		&:before
 			content: '•'
@@ -1525,15 +1522,24 @@ div.le-mapcontainer
 // better use svgs here
 footer
 	padding: $box-pad
+	min-height: 40px
 
 ul.social // social links in the bootom footer
+	display: block
+	width: 100%
 	li
 		display: inline-block
 		width: 20px
+		float: left
 		margin-right: 10px
 		padding: 0
-		.text
+		
+		&.text
 			width: auto
 			font-size: $font-size-small	
 			vertical-align: top
 			padding-left: $box-pad
+
+		&:last-child
+			right: 0
+			float: right

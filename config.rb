@@ -13,13 +13,13 @@ helpers PrismicHelpers
 helpers NumaHelpers
 
 configure :development do
-  activate :livereload
+	activate :livereload
 end
 
 activate :directory_indexes
 
 activate :sprockets do |c|
-  c.imported_asset_path = '/lib/'
+	c.imported_asset_path = '/lib/'
 end
 
 def get_loc_setting(setting_name)
@@ -35,8 +35,8 @@ configure :build do
 	puts "Building apply-page of: " + ENV['location']
 	activate :relative_assets
 	set :relative_links, true
-  activate :minify_css
-  activate :minify_javascript
+	activate :minify_css
+	activate :minify_javascript
 	write_CNAME
 end
 
@@ -52,14 +52,7 @@ end
 
 activate :deploy do |deploy|
 	deploy.deploy_method = :git
-  deploy.remote = location_based_remote
+	deploy.remote = location_based_remote
 	deploy.build_before = true
-  deploy.commit_message = "Automated deploy at #{Time.now}"
+	deploy.commit_message = "Automated deploy at #{Time.now}"
 end
-
-# activate :google_analytics do |ga|
-#   ga.tracking_id = 'UA-76972340-1'
-#   ga.domain_name = 'somedomain.com'
-#   ga.enhanced_link_attribution = true
-#   ga.development = false
-# end
