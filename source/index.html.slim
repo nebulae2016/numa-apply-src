@@ -43,9 +43,10 @@
 			.vidholder
 				#play-video.vidthumb
 					= image_tag main_data['numa.video-cover'].main.url, :class=>'thumb' if main_data['numa.video-cover'].present?
-					div.le-play = image_tag 'play.png', :class=>'playbtn'
-						#videocontainer
-							= main_data['numa.video-embed'].as_html
+					div.le-play
+						= image_tag 'play.png', :class=>'playbtn'
+				#videocontainer
+					= main_data['numa.video-embed'].as_html
 
 	section#wanted
 		header = get_rich_text_helper('header-wanted')
